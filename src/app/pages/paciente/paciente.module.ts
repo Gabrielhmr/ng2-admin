@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { PacienteComponent } from './paciente.component';
 import { routing } from './paciente.routing';
+import { PacienteListComponent } from './paciente-list/paciente-list.component';
+import { PacienteAddComponent } from './paciente-add/paciente-add.component';
 
 @NgModule({
   imports: [
@@ -11,6 +13,6 @@ import { routing } from './paciente.routing';
     FormsModule,
     routing,
   ],
-  declarations: [PacienteComponent]
+  declarations: [PacienteComponent, PacienteListComponent, PacienteAddComponent]
 })
 export class PacienteModule { }
