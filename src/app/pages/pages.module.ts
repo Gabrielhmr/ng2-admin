@@ -5,6 +5,8 @@ import { routing }       from './pages.routing';
 import { NgaModule } from '../theme/nga.module';
 import { AppTranslationModule } from '../app.translation.module';
 
+// import { PacienteComponent } from './paciente/paciente.component';
+
 import { Pages } from './pages.component';
 
 @NgModule({
