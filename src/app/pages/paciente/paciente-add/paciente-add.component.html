@@ -1,3 +1,31 @@
-<p>
-  paciente-add works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" [(ngModel)]="paciente.nome" name="nome" class="form-control" id="nome">
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input type="number" [(ngModel)]="paciente.telefone" name="telefone" class="form-control" id="telefone">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" [(ngModel)]="paciente.email" name="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="clinicas">Selecione sua clinica</label>
+    <select class="form-control" id="clinicas">
+      <option>Unimed</option>
+      <option>Hapvida</option>
+      <option>Amil</option>
+      <option>Bradesco</option>
+      <option>Gamec</option>
+    </select>
+  </div>
+</form>
+<div class="pull-right">
+<div class="button-wrapper">
+  <a href="http://localhost:4200/#/pages/paciente/">
+    <button (click)="saveOrUpdate()" class="btn btn-success btn-xm">Salvar</button>
+  </a>
+</div>
+</div>

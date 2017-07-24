@@ -5,4 +5,12 @@
 
 export const environment = {
   production: false,
+  firebase : {
+  apiKey: 'AIzaSyDxr6tdJsMoGdLV9VoZAYF_RoGpDC2GWXQ',
+  authDomain: 'encaixe-cf705.firebaseapp.com',
+  databaseURL: 'https://encaixe-cf705.firebaseio.com',
+  projectId: 'encaixe-cf705',
+  storageBucket: '',
+  messagingSenderId: '974938637134',
+},
 };

@@ -10,6 +10,8 @@ const routes: Routes = [
     path: '',
     component: PacienteListComponent,
   },
+  { path: 'add', component: PacienteAddComponent },
+  { path: 'edit/:id', component: PacienteAddComponent },
 ];
 
 export const routing = RouterModule.forChild(routes);

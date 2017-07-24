@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -40,6 +44,9 @@ export type StoreType = {
   ],
   imports: [ // import Angular's modules
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, 'encaixe'), // imports firebase/app needed for everything
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     HttpModule,
     RouterModule,
     FormsModule,

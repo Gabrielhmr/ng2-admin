@@ -1,3 +1,44 @@
-<p>
-  paciente-list works!
-</p>
+<div class="pull-left">
+<div class="button-wrapper">
+  <a href="http://localhost:4200/#/pages/paciente/add">
+    <button  class="btn btn-success">Novo Paciente</button>
+  </a>
+</div>
+</div>
+<div class="horizontal-scroll">
+  <table class="table table-condensed">
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Acoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of pacientes | async">
+      <td>{{ item.nome }}</td>
+      <td>{{ item.telefone }}</td>
+      <td>{{ item.email }}</td>
+      <td>
+        <a [routerLink] = "['edit',item.$key]">
+          <button  class="btn btn-xs btn-warning btn-icon"><i class="ion-edit"></i></button>
+        </a>
+          <button (click)="deleteItem(item.$key)" class="btn btn-xs btn-danger btn-icon">
+            <i class="ion-close-round"></i>
+          </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ul>
+<!--  <li *ngFor="let item of items | async">
+    <input type="text" #updatetext [value]="item.nome" />
+    <button (click)="updateItem(item.$key, updatetext.value)">Update</button>
+    <button (click)="deleteItem(item.$key)">Delete</button>
+  </li>
+</ul>
+<input type="text" #newitem />
+<button (click)="addItem(newitem.value)">Add</button>
+<button (click)="deleteEverything()">Delete All</button>-->
