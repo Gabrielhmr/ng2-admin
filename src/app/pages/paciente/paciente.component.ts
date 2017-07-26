@@ -9,7 +9,10 @@ export class PacienteComponent implements OnInit {
   nome: string;
   email: string;
   telefone: string;
-//  listClinicas: Array<string>;
+  endereco: string;
+  cidade: string;
+  estado: string;
+  cpf: string;
 
   constructor() { }
 

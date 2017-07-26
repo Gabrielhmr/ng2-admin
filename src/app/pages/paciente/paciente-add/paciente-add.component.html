@@ -12,6 +12,22 @@
     <input type="email" [(ngModel)]="paciente.email" name="email" class="form-control" id="email">
   </div>
   <div class="form-group">
+    <label for="endereco">Endereco</label>
+    <input type="endereco" [(ngModel)]="paciente.endereco" name="endereco" class="form-control" id="endereco">
+  </div>
+  <div class="form-group">
+    <label for="cidade">Cidade</label>
+    <input type="cidade" [(ngModel)]="paciente.cidade" name="cidade" class="form-control" id="cidade">
+  </div>
+  <div class="form-group">
+    <label for="estado">Estado</label>
+    <input type="estado" [(ngModel)]="paciente.estado" name="estado" class="form-control" id="estado">
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="cpf" [(ngModel)]="paciente.cpf" name="cpf" class="form-control" id="cpf">
+  </div>
+<!--  <div class="form-group">
     <label for="clinicas">Selecione sua clinica</label>
     <select class="form-control" id="clinicas">
       <option>Unimed</option>
@@ -20,7 +36,7 @@
       <option>Bradesco</option>
       <option>Gamec</option>
     </select>
-  </div>
+  </div> -->
 </form>
 <div class="pull-right">
 <div class="button-wrapper">

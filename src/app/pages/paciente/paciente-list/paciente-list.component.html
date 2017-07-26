@@ -1,6 +1,6 @@
 <div class="pull-left">
 <div class="button-wrapper">
-  <a href="http://localhost:4200/#/pages/paciente/add">
+  <a [routerLink] = "['add']">
     <button  class="btn btn-success">Novo Paciente</button>
   </a>
 </div>
@@ -12,6 +12,10 @@
       <th>Nome</th>
       <th>Telefone</th>
       <th>Email</th>
+      <th>Endereco</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>CPF</th>
       <th>Acoes</th>
     </tr>
     </thead>
@@ -20,6 +24,10 @@
       <td>{{ item.nome }}</td>
       <td>{{ item.telefone }}</td>
       <td>{{ item.email }}</td>
+      <td>{{ item.endereco }}</td>
+      <td>{{ item.cidade }}</td>
+      <td>{{ item.estado }}</td>
+      <td>{{ item.cpf }}</td>
       <td>
         <a [routerLink] = "['edit',item.$key]">
           <button  class="btn btn-xs btn-warning btn-icon"><i class="ion-edit"></i></button>
@@ -33,12 +41,3 @@
   </table>
 </div>
 <ul>
-<!--  <li *ngFor="let item of items | async">
-    <input type="text" #updatetext [value]="item.nome" />
-    <button (click)="updateItem(item.$key, updatetext.value)">Update</button>
-    <button (click)="deleteItem(item.$key)">Delete</button>
-  </li>
-</ul>
-<input type="text" #newitem />
-<button (click)="addItem(newitem.value)">Add</button>
-<button (click)="deleteEverything()">Delete All</button>-->

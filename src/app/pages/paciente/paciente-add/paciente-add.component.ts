@@ -16,12 +16,10 @@ export class PacienteAddComponent implements OnInit {
   p: FirebaseObjectObservable<any>;
 
   constructor(db: AngularFireDatabase, route: ActivatedRoute) {
-
-    this.pacienteList = db.list('/pacientes');
-    this.pacienteId = route.snapshot.params['id'];
+     this.pacienteList = db.list('/pacientes');
+     this.pacienteId = route.snapshot.params['id'];
 
      if (this.pacienteId !== undefined) {
-
         this.p = db.object('/pacientes/'+ this.pacienteId, { preserveSnapshot: true });
         this.p.subscribe(snapshot => {
           this.paciente = snapshot.val()
